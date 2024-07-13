@@ -1,4 +1,5 @@
- $services = [
+ <?php
+    $services = [
         [
             'uri' => 'gestionale',
             'name' => 'Sistema sdfsdfsd Gestionali',
