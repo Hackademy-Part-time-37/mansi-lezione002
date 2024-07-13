@@ -15,9 +15,9 @@
             <a class="navbar-brand" href="/">Aulab</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link " aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/chi-sono">Chi sono</a>
-                    <a class="nav-link" href="/servizi-offerti">Servizi</a>
+                    <a class="nav-link " aria-current="page" href="{{ route('homepage') }}">Home</a>
+                    <a class="nav-link" href="{{ route('chisono') }}">Chi sono</a>
+                    <a class="nav-link" href="{{ route('servizi') }}">Servizi</a>
                 </div>
             </div>
         </div>

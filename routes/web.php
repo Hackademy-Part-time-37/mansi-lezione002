@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 //$url = link = http://127.0.0.1:8000/ciao
@@ -7,32 +8,11 @@ use Illuminate\Support\Facades\Route;
 //$dominio =http://127.0.0.1:8000
 //$uri =/ciao
 
-Route::get('/', function () {
-    //resources/views
-    //welcome
-    //.blade.php
-    return view('welcome');
-})->name('homepage');
-
-Route::get('/chi-sono-io-sdsdsds-sdfsdfsdsdsdffsdsdffsd', function () {
-    //resources/views/
-    //about-us
-    //.blade.php
-    return view('about-us');
-})->name('chisono');
-
-Route::get('/servizi-offerti', function () {
-    //Marketing, Sviluppo Web, eCommerce
-    $servizi = ['marketing', 'consulenze', 'web', 'ecommerce', 'ciao', 'aulab', 'ciccio'];
-
-
-    return view('servizi', ['servizi' => $servizi]);
-})->name('servizi');
-
-Route::get('/dettaglio-servizio/{service}', function ($service) {
-
-    return view('servizio', ['servizio' => $service]);
-})->name('servizio');
+// Route::get('/',['Controller', 'metodo'])->name('homepage');
+Route::get('/', [PageController::class, 'homepage'])->name('homepage');
+Route::get('/chi-sono', [PageController::class, 'about'])->name('chisono');
+Route::get('/servizi-offerti', [PageController::class, 'services'])->name('servizi');
+Route::get('/dettaglio-servizio/{service}', [PageController::class, 'service'])->name('servizio');
  
 
 //Rotta parametrica

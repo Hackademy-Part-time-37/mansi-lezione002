@@ -17,7 +17,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link " aria-current="page" href="{{ route('homepage') }}">Home</a>
                     <a class="nav-link" href="{{ route('chisono') }}">Chi sono</a>
-                    <a class="nav-link" href="/servizi-offerti">Servizi</a>
+                    <a class="nav-link" href="{{ route('servizi') }}">Servizi</a>
                 </div>
             </div>
         </div>
