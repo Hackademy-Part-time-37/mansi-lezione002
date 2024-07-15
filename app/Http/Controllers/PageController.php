@@ -60,6 +60,7 @@ class PageController extends Controller
 
     public function services()
     {
+
         //Marketing, Sviluppo Web, eCommerce 
 
         return view('servizi', ['servizi' => $this->services]);
@@ -72,7 +73,13 @@ class PageController extends Controller
         // dd($service);
 
         //1)Leggo $service ='gestionale'
-        dd($this->services);
+        //dd($this->services);
+
+        // ciclo($this->services in $elemento)
+        // if $elemento['uri'] == $service
+        // return view('servizio', ['servizio' => $service]);
+        //altrimenti
+        //abort(404);
         return view('servizio', ['servizio' => $service]);
     }
 }

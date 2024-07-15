@@ -44,7 +44,7 @@
                                 <p class="card-text">Costo: {{ $servizio['costo'] }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="{{ route('servizio', ['service' => $servizio['uri']]) }}"
+                                        <a href="{{ route('servizio', ['service' => $servizio['uri'], 'testo' => 'esempio']) }}"
                                             type="button" class="btn btn-sm btn-outline-secondary">Vedi
                                             Servizio</a>
 

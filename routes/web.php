@@ -8,11 +8,12 @@ use Illuminate\Support\Facades\Route;
 //$dominio =http://127.0.0.1:8000
 //$uri =/ciao
 
+
 // Route::get('/',['Controller', 'metodo'])->name('homepage');
 Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 Route::get('/chi-sono', [PageController::class, 'about'])->name('chisono');
 Route::get('/servizi-offerti', [PageController::class, 'services'])->name('servizi');
-Route::get('/dettaglio-servizio/{service}', [PageController::class, 'service'])->name('servizio');
+Route::get('/dettaglio-servizio/{service}/{testo}', [PageController::class, 'service'])->name('servizio');
  
 
 //Rotta parametrica
